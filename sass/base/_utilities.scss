@@ -1,0 +1,41 @@
+.underline {
+    padding: 1.5rem;
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 17.5%;
+    background-position: 0 80%;
+    transition: all .3s;
+
+    &:hover {
+        background-size: 100% 100%;
+        color: #000;
+    }
+}
+
+.underline-smaller {
+    display: inline-block;
+    padding-bottom: 1.5rem;
+    background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 9%;
+    background-position: 0 70%;
+}
+
+.highlight {
+    background: linear-gradient(to right, #84fab0 0%, #8fd3f4 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 0 88%;
+    transition: background-size 0.25s ease-in;
+    transition: all .5s;
+    padding: .9rem;
+    color: #000;
+}
+
+.bracket {
+    font-size: 7rem;
+    margin: .5rem;
+
+    position: relative;
+    top: 1.1rem;
+}

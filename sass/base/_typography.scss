@@ -1,0 +1,77 @@
+.heading-primary {
+    text-align: center;
+    margin-top: -10rem;
+
+    &__main {
+        font-size: 8rem;
+        text-transform: uppercase;
+        font-weight: 900;
+        letter-spacing: .5rem;
+    }
+
+    &__sub {
+        width: 80%;
+        margin: 4.5rem auto;
+        font-size: 2rem;
+        font-weight: 100;
+
+        line-height: 3.5rem;
+    }
+}
+
+.sections {
+
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    position: relative;
+    top: 80%;
+    
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        text-transform: uppercase;
+
+        background-color: #303337;
+        height: 7rem;
+        width: 20rem;
+
+        box-shadow: 0 1rem 3.5rem rgba(0,0,0,.9);
+
+        transition: all .5s;
+
+        /* 
+            Change the rectangular design
+            
+            This skews the card and everything inside the card
+        */
+        transform: skewX(-25deg);
+        
+        &:not(:last-child) {
+            margin-right: 5.5rem;
+        }
+
+        &:hover {
+            transform: scale(1.1) skewX(-25deg);
+        }
+
+        &__heading {
+            font-size: 2rem;
+            transform: skewX(25deg);
+        }
+
+        &__content {
+            letter-spacing: .1rem;
+            font-size: 1.2rem;
+            text-align: center;
+            font-style: italic;
+            transform: skewX(25deg);
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "catalinpit.github.io",
+  "version": "1.0.0",
+  "description": "Catalin's web page",
+  "main": "index.js",
+  "scripts": {
+    "devserver": "live-server",
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "compile:sass": "node-sass sass/main.scss css/style.compiled.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css",
+    "build-dev:css": "npm-run-all --parallel devserver watch:sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/catalinpit/catalinpit.github.io.git"
+  },
+  "author": "Catalin Pit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/catalinpit/catalinpit.github.io/issues"
+  },
+  "homepage": "https://github.com/catalinpit/catalinpit.github.io#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "concat": "^1.0.3",
+    "node-sass": "^4.13.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.0"
+  }
+}

@@ -1,0 +1,132 @@
+:root {
+  --color-primary: #16161a;
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999; }
+
+/* 
+    Normalize the CSS to make every browser render the page in the exact same way 
+    The universal selector selects every element on the webpage and apply the declarations
+*/
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit; }
+
+html {
+  /* 
+        This defines what 1 REM is
+        1 REM = 10 pixels 
+        10px/16px = 62.5%
+    */
+  font-size: 62.5%;
+  /* 
+        Change the box model so that the borders and paddings are no longer added to
+        the total width or the total height that we specify for a box.
+    */
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Open Sans', sans-serif; }
+
+.heading-primary {
+  text-align: center;
+  margin-top: -10rem; }
+  .heading-primary__main {
+    font-size: 8rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: .5rem; }
+  .heading-primary__sub {
+    width: 80%;
+    margin: 4.5rem auto;
+    font-size: 2rem;
+    font-weight: 100;
+    line-height: 3.5rem; }
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  top: 80%; }
+  .row__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    text-transform: uppercase;
+    background-color: #303337;
+    height: 7rem;
+    width: 20rem;
+    box-shadow: 0 1rem 3.5rem rgba(0, 0, 0, 0.9);
+    transition: all .5s;
+    /* 
+            Change the rectangular design
+            
+            This skews the card and everything inside the card
+        */
+    transform: skewX(-25deg); }
+    .row__card:not(:last-child) {
+      margin-right: 5.5rem; }
+    .row__card:hover {
+      transform: scale(1.1) skewX(-25deg); }
+    .row__card__heading {
+      font-size: 2rem;
+      transform: skewX(25deg); }
+    .row__card__content {
+      letter-spacing: .1rem;
+      font-size: 1.2rem;
+      text-align: center;
+      font-style: italic;
+      transform: skewX(25deg); }
+
+.underline {
+  padding: 1.5rem;
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 17.5%;
+  background-position: 0 80%;
+  transition: all .3s; }
+  .underline:hover {
+    background-size: 100% 100%;
+    color: #000; }
+
+.underline-smaller {
+  display: inline-block;
+  padding-bottom: 1.5rem;
+  background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 9%;
+  background-position: 0 70%; }
+
+.highlight {
+  background: linear-gradient(to right, #84fab0 0%, #8fd3f4 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+  transition: all .5s;
+  padding: .9rem;
+  color: #000; }
+
+.bracket {
+  font-size: 7rem;
+  margin: .5rem;
+  position: relative;
+  top: 1.1rem; }
+
+.header {
+  height: 100vh;
+  background-color: var(--color-primary);
+  color: var(--color-grey-light-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }

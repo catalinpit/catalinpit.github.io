@@ -1,0 +1,40 @@
+:root {
+    --color-primary: #16161a;
+    --color-grey-light-1: #faf9f9;
+    --color-grey-light-2: #f4f2f2;
+    --color-grey-light-3: #f0eeee;
+    --color-grey-light-4: #ccc;
+    --color-grey-dark-1: #333;
+    --color-grey-dark-2: #777;
+    --color-grey-dark-3: #999;
+}
+
+/* 
+    Normalize the CSS to make every browser render the page in the exact same way 
+    The universal selector selects every element on the webpage and apply the declarations
+*/
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    /* 
+        This defines what 1 REM is
+        1 REM = 10 pixels 
+        10px/16px = 62.5%
+    */
+    font-size: 62.5%;
+    /* 
+        Change the box model so that the borders and paddings are no longer added to
+        the total width or the total height that we specify for a box.
+    */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
