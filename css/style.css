@@ -55,7 +55,7 @@ body {
   align-items: center;
   justify-content: space-evenly;
   position: relative;
-  top: 80%; }
+  top: 110%; }
   .row__card {
     display: flex;
     flex-direction: column;
@@ -63,10 +63,11 @@ body {
     padding: 2rem;
     text-transform: uppercase;
     background-color: #303337;
-    height: 7rem;
-    width: 20rem;
-    box-shadow: 0 1rem 3.5rem rgba(0, 0, 0, 0.9);
-    transition: all .5s;
+    height: 13rem;
+    width: 100%;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.9);
+    transition: transform .6s, border .2s;
+    border-bottom: 3px solid #84fab0;
     /* 
             Change the rectangular design
             
@@ -76,11 +77,13 @@ body {
     .row__card:not(:last-child) {
       margin-right: 5.5rem; }
     .row__card:hover {
-      transform: scale(1.1) skewX(-25deg); }
+      transform: scale(1.2) skewX(-25deg);
+      border: 3px solid #84fab0; }
     .row__card__heading {
       font-size: 2rem;
       transform: skewX(25deg); }
     .row__card__content {
+      padding-top: .2rem;
       letter-spacing: .1rem;
       font-size: 1.2rem;
       text-align: center;
