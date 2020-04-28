@@ -8,3 +8,20 @@
     justify-content: center;
     flex-direction: column;
 }
+
+.spiky-bottom {
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        left: -0%;
+        top: 100%;
+        z-index: 10;
+        display: block;
+        height: 30px;
+        background-size: 30px 100%;
+        background-image: linear-gradient(135deg, var(--color-primary) 25%, transparent 25%), linear-gradient(225deg, var(--color-primary) 25%, transparent 25%);
+        background-position: 0 0;
+    }
+}

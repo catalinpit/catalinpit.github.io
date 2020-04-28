@@ -79,3 +79,19 @@
         }
     }
 }
+
+.experience {
+    
+    &__heading {
+        font-size: 8rem;
+        text-transform: uppercase;
+        letter-spacing: -.5rem;
+        padding-top: 5rem;
+    }
+
+    &__subheading {
+        font-size: 4rem;
+        font-weight: 100;
+        letter-spacing: .2rem;
+    }
+}

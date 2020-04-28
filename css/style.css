@@ -6,7 +6,9 @@
   --color-grey-light-4: #ccc;
   --color-grey-dark-1: #333;
   --color-grey-dark-2: #777;
-  --color-grey-dark-3: #999; }
+  --color-grey-dark-3: #999;
+  --color-experience-background: #242629;
+  --color-experience-timeline-background: #16161a; }
 
 /* 
     Normalize the CSS to make every browser render the page in the exact same way 
@@ -90,6 +92,17 @@ body {
       font-style: italic;
       transform: skewX(25deg); }
 
+.experience__heading {
+  font-size: 8rem;
+  text-transform: uppercase;
+  letter-spacing: -.5rem;
+  padding-top: 5rem; }
+
+.experience__subheading {
+  font-size: 4rem;
+  font-weight: 100;
+  letter-spacing: .2rem; }
+
 .underline {
   padding: 1.5rem;
   background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
@@ -125,6 +138,54 @@ body {
   position: relative;
   top: 1.1rem; }
 
+.timeline-content {
+  text-align: center; }
+
+.timeline {
+  margin-top: 10rem;
+  list-style: none;
+  font-size: 1.5rem;
+  letter-spacing: .1rem;
+  border-left: 1px solid #84fab0;
+  padding: 4rem;
+  margin: 10rem auto; }
+  .timeline__event {
+    position: relative;
+    background-color: var(--color-experience-timeline-background);
+    padding: 3rem;
+    box-shadow: 0 0.9rem 1.5rem rgba(0, 0, 0, 0.5); }
+    .timeline__event:not(:last-child) {
+      padding-bottom: 2.5rem;
+      margin-bottom: 2.5rem; }
+    .timeline__event:before, .timeline__event:after {
+      display: block;
+      top: 0;
+      position: absolute; }
+    .timeline__event:before {
+      left: -21rem;
+      top: 4.5rem;
+      content: attr(data-date);
+      text-align: right;
+      font-weight: 100;
+      letter-spacing: .5rem;
+      padding-bottom: 1.5rem;
+      background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 100%);
+      background-repeat: no-repeat;
+      background-size: 100% 9%;
+      background-position: 0 70%; }
+    .timeline__event:after {
+      box-shadow: 0 0 0 fade(black, 100%);
+      left: -5.5rem;
+      background: var(--color-experience-background);
+      border: 1px solid #84fab0;
+      border-radius: 50%;
+      height: 3rem;
+      width: 3rem;
+      content: '';
+      top: 4.75rem; }
+    .timeline__event > h3 {
+      margin-bottom: 2rem; }
+
 .header {
   height: 100vh;
   background-color: var(--color-primary);
@@ -132,4 +193,25 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column; }
+
+.spiky-bottom::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  left: -0%;
+  top: 100%;
+  z-index: 10;
+  display: block;
+  height: 30px;
+  background-size: 30px 100%;
+  background-image: linear-gradient(135deg, var(--color-primary) 25%, transparent 25%), linear-gradient(225deg, var(--color-primary) 25%, transparent 25%);
+  background-position: 0 0; }
+
+.experience {
+  height: 100vh;
+  background: var(--color-experience-background);
+  color: var(--color-grey-light-1);
+  display: flex;
+  align-items: center;
   flex-direction: column; }

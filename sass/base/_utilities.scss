@@ -39,3 +39,66 @@
     position: relative;
     top: 1.1rem;
 }
+
+.timeline-content {
+    text-align: center;
+}
+
+.timeline {
+    margin-top: 10rem;
+    list-style: none;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    border-left: 1px solid #84fab0;
+    //background-color: var(--color-experience-timeline-background);
+    padding: 4rem;
+    margin: 10rem auto;
+
+    &__event {
+        position: relative;
+        background-color: var(--color-experience-timeline-background);
+        padding: 3rem;
+        box-shadow: 0 .9rem 1.5rem rgba(0,0,0,.5);
+
+        &:not(:last-child) {
+            padding-bottom: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        &:before, &:after {
+            display: block;
+            top: 0;
+            position: absolute;
+        }
+
+        &:before {
+            left: -21rem;
+            top: 4.5rem;
+            content: attr(data-date);
+            text-align: right;
+            font-weight: 100; 
+            letter-spacing: .5rem;
+            padding-bottom: 1.5rem;
+            background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 9%;
+            background-position: 0 70%;
+        }
+
+        &:after {
+            box-shadow: 0 0 0 fade(black,100%);    
+            left: -5.5rem;   
+            background: var(--color-experience-background);
+            border: 1px solid #84fab0;
+            border-radius: 50%;  
+            height: 3rem;
+            width: 3rem;
+            content: '';
+            top: 4.75rem;
+        }
+
+        & > h3 {
+            margin-bottom: 2rem;
+        }
+    }
+}
